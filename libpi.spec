@@ -8,8 +8,8 @@ Group:		Libraries
 Source0:	http://team.pld-linux.org/~wolf/pacman/%{name}-%{version}.tar.bz2
 # Source0-md5:	64d38f3009f0305f3436e082436608f2
 URL:		http://team.pld-linux.org/~wolf/pacman/
-Requires:	poldek
 BuildRequires:	libstdc++-devel
+Requires:	poldek
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,7 +22,8 @@ Biblioteka interakcji z poldkiem.
 Summary:	libpi header files
 Summary(pl):	Pliki nag³ówkowe libpi
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
+Requires:	libstdc++-devel
 
 %description devel
 libpi header files.
