@@ -6,7 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://team.pld-linux.org/~wolf/pacman/%{name}-%{version}.tar.bz2
-# Source0-md5:	c1bfb463aff3e5a3a2a3fbe424eda93c
+# Source0-md5:	bdf3331fea6185d35734d24547b1ada2
 URL:		http://team.pld-linux.org/~wolf/pacman/
 Requires:	poldek
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
