@@ -2,13 +2,14 @@ Summary:	Poldek Interaction library
 Summary(pl):	Biblioteka interakcji z poldkiem
 Name:		libpi
 Version:	0.1
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Libraries
 Source0:	http://team.pld-linux.org/~wolf/pacman/%{name}-%{version}.tar.bz2
-# Source0-md5:	bdf3331fea6185d35734d24547b1ada2
+# Source0-md5:	64d38f3009f0305f3436e082436608f2
 URL:		http://team.pld-linux.org/~wolf/pacman/
 Requires:	poldek
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +36,7 @@ Pliki nag³ówkowe libpi.
 %build
 %{__make} \
 	CXX="%{__cxx}" \
-	CFLAGS="%{rpmcflags}" \
+	CFLAGS="%{rpmcflags} -DNDEBUG" \
 	LDFLAGS="%{rpmldflags}" \
 	PCH=0
 
