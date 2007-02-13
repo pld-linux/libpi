@@ -1,5 +1,5 @@
 Summary:	Poldek Interaction library
-Summary(pl.UTF-8):   Biblioteka interakcji z poldkiem
+Summary(pl.UTF-8):	Biblioteka interakcji z poldkiem
 Name:		libpi
 Version:	0.1.1
 Release:	1
@@ -20,7 +20,7 @@ Biblioteka interakcji z poldkiem.
 
 %package devel
 Summary:	libpi header files
-Summary(pl.UTF-8):   Pliki nagłówkowe libpi
+Summary(pl.UTF-8):	Pliki nagłówkowe libpi
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
