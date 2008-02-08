@@ -44,12 +44,9 @@ Pliki nagłówkowe libpi.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}/libpi}
-
 install libpi.so.*.*.* $RPM_BUILD_ROOT%{_libdir}
-install *.h $RPM_BUILD_ROOT%{_includedir}/libpi
-
-cd $RPM_BUILD_ROOT%{_libdir}
-ln -sf libpi.so.*.*.* libpi.so
+ln -s $(basename $RPM_BUILD_ROOT%{_libdir}/libpi.so.*.*.*) $RPM_BUILD_ROOT%{_libdir}/libpi.so
+cp -a *.h $RPM_BUILD_ROOT%{_includedir}/libpi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,4 +62,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libpi.so
 %{_includedir}/libpi
-#%exclude %{_includedir}/libpi/all.h*
